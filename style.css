@@ -1,5 +1,6 @@
 
-body {
+/* Log In CSS */
+body.loginBody {
   height: 100%;
   background-image: url(images/wallpaperSignIn.png);
   background-repeat: no-repeat;
@@ -84,3 +85,71 @@ button{
       flex-direction: row; /* Side by side for large screens */
     }
   }
+
+/* Index Page CSS */
+
+body.home{
+    background-color: white;
+    color: #310A59;
+    font: 20px Inter;
+
+}
+
+.categories{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.search-bar{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.search-bar input{
+    margin-left: 50px;
+    border-radius: 35px;
+    background-color: #E3D2FF;
+    border: none;
+    width: 500px;
+    padding-left: 25px;
+}
+.category{
+    position: relative;
+    border: #D6D6E2 4px solid;
+    transition: filter 3.0s ease, transform 3.0s ease;
+    margin: 10px;
+    position: relative;
+    color: white;
+}
+.category img:hover{
+    transform: scale(1.05);
+    filter: grayscale(100%);
+    opacity: 0.5;
+
+}
+
+.OverlayText {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.categories img:hover +.OverlayText{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* [] CSS */
