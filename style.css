@@ -80,8 +80,8 @@ button{
     
 }
 
-@media (min-width: 1024px) {
-    body {
+@media (min-width: 1080px) {
+    body.loginBody {
       flex-direction: row; /* Side by side for large screens */
     }
   }
