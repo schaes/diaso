@@ -1,27 +1,86 @@
-html,
+
 body {
   height: 100%;
-  background-color: black;
-  color: white;
+  background-image: url(images/wallpaperSignIn.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #310A59;
+  font: 20px Inter;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+p {
+  font: bold 16px Inter;
+
 }
 
-.form-signin {
-  max-width: 330px;
-  padding: 1rem;
+.loginBox{
+    height: auto;
+    width: 50vw;
+    max-width: 400px;
+
+    margin: 40px;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
+
+
+.loginBox form{
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.loginBox form div{
+    margin-bottom: 20px;
 }
 
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+input{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #E3D2FF;
+    border: none;
 }
+::placeholder{
+    color: #AC8CCE;
+}
+
+.logo{
+    padding: 50px;
+    margin-top: 50px;
+
+}
+
+button{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding:5px;
+    background-color: #4C0099;
+    color: white;
+    font: bold 16px Inter;
+    border: none;
+}
+
+.signUpBtn{
+    width: 100px;
+    margin-top: -10px;
+    color: #f5ecff;
+    
+}
+
+@media (min-width: 1024px) {
+    body {
+      flex-direction: row; /* Side by side for large screens */
+    }
+  }
