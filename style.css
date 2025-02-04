@@ -126,6 +126,7 @@ body.home h3{
 }
 
 .search-bar input{
+    padding: 15px;
     margin-left: 50px;
     border-radius: 35px;
     background-color: #E3D2FF;
@@ -203,23 +204,34 @@ body.home h3{
     padding-top: 40px;
 }
 
-.ftContainer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 100px;
-    color: white;
+.description{
+
+    max-width: 480px;
+    background-color: #f5eeff;
+    padding: 10px;
 }
 
-.description{
-    margin-top: 20px;
-    max-width: 700px;
+.ftContainer .description{
+
+    max-width: 680px;
+    background-color: #f5eeff;
+    padding: 10px;
+}
+
+.ftContainer{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: #E3D2FF 5px solid;
 }
 
 .ftTitle{
     text-align: left;
     font: bold 40px Inter;
+    
 }
 
 .Cost{
@@ -229,4 +241,22 @@ body.home h3{
     text-decoration: none;
 
 }
+
+.doubleContainer{
+    display: flex;
+    justify-content: center;
+    border-bottom: #E3D2FF 5px solid;
+    padding-top: 30px;
+    padding-bottom:30px;
+    flex-wrap: wrap;
+    
+}
+
+.dContIndiv{
+    display: flex;
+    flex-direction: column;
+    flex-grow: inherit;
+    margin: 10px;
+}
+
 /* [] CSS */
