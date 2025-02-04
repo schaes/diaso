@@ -95,17 +95,33 @@ body.home{
 
 }
 
-.categories{
+body.home h1{
+    font-size: 60px;
+}
+
+
+body.home h3{
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.scrollContainer{
+    background-color: #f6f1ff;
     display: flex;
     flex-direction: row;
     margin-top: 50px;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
 }
+
 
 .search-bar{
     margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -141,7 +157,7 @@ body.home{
     border-radius: 5px;
 
 }
-.categories img:hover +.OverlayText{
+.scrollContainer img:hover +.OverlayText{
     display: block;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     color: white;
@@ -151,5 +167,66 @@ body.home{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.topNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4C0099;
+    color: white;
+}
+
+.bottomNav {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+
+    width: 100%;
+    padding: 10px;
+    background-color: #4C0099;
+    color: white;
+}
+
+.bottomNav div {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+#featured{
+    text-align: center;
+    font-size: 60px;
+    border-top:#E3D2FF 5px solid;
+    padding-top: 40px;
+}
+
+.ftContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    color: white;
+}
+
+.description{
+    margin-top: 20px;
+    max-width: 700px;
+}
+
+.ftTitle{
+    text-align: left;
+    font: bold 40px Inter;
+}
+
+.Cost{
+    text-align: right;
+    font-size: 70px;
+    color: #775EE3;
+    text-decoration: none;
+
 }
 /* [] CSS */
