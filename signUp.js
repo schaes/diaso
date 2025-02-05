@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         console.log(data);
         document.getElementById("contact-submit").disabled = false;
+        window.location.href = "content1.html";
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
