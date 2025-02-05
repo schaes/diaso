@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <title>LOG IN</title>
     <link rel="stylesheet" href="normalize.css">
@@ -10,31 +9,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
 </head>
 
 <body class="loginBody">
-    <img class="logo" src="images\logo.svg" alt="Diaso Logo" width="700" height="605.3">
+    <img class="logo" src="images/logo.svg" alt="Diaso Logo" width="700" height="605.3">
     <div class="loginBox">
         <h1>Welcome!</h1>
-        <form>
-            <label>Username</label>
+        <form id="login-form">
+            <label for="username">Username</label>
             <div>
-                <input type="text" placeholder="Username" required>
+                <input type="text" id="username" placeholder="Username" required>
             </div>
-            <label>Password</label>
+            <label for="password">Password</label>
             <div>
-                <input type="password" placeholder="Password" required>
+                <input type="password" id="password" placeholder="Password" required>
             </div>
-
-            <button class="logInBtn" type="submit">Log In</button>
-
-
+            <button class="logInBtn" type="submit" id="login-submit">Log In</button>
         </form>
         <p>Don't have an account?</p>
-        <a href="register.html"><button class="signUpBtn" type="submit">Sign Up</button></a>
+        <a href="register.html"><button class="signUpBtn" type="button">Sign Up</button></a>
     </div>
-
+    <script src="logIn.js"></script>
 </body>
 
 </html>
