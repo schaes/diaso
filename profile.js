@@ -7,10 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
   }
 
-  const usrnmProfileDisplay = document.getElementById("usrnmProfile");
-  const biographyDiv = document.getElementById("bio");
+
   const levelElement = document.getElementById('level');
-  const levelDisplay = document.querySelector("#expBar span");
+
   const expProgress = document.getElementById("expProgress");
 
   var settings = {
@@ -28,46 +27,94 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fetch user data
   $.ajax(settings).done(function (response) {
       if (response.length > 0) {
-          const user = response[0]; // Access the first element of the array
-          console.log(user);
+        const user = response[0]; // Access the first element of the array
+        console.log(user);
 
-          usrnmProfile.textContent = user.username;
-          biography.textContent = user.bio|| "No bio available.";
+        usrnmProfile.textContent = user.username;
+        biography.textContent = user.bio|| "No bio available.";
 
-          const currentExp = user.currentExp;
-          const maxExp = user.maxExp;
-          let currentLevel = user.level; // Set currentLevel to user's level
-          const expInProgressBar = currentExp % maxExp;
+        const currentExp = user.currentExp;
+        const maxExp = user.maxExp;
+        let currentLevel = user.level; // Set currentLevel to user's level
+        const expInProgressBar = currentExp % maxExp;
 
-          levelElement.textContent = `lv.${currentLevel}`;
-          updateExpBar(expInProgressBar, maxExp);
+        if (currentLevel == null || currentLevel === undefined) {
+            currentLevel = 1;
+        }
 
-          levelDisplay.textContent = `lv.${currentLevel}`;
+
+        // updateExpBar(expInProgressBar, maxExp);          //example for adding points part two
+        // addExperience(10); // Add 10 experience points
+        // currentLevel += addedLevel;
+        levelElement.textContent = `lv.${currentLevel}`;
+
       } else {
           alert("User not found.");
       }
   })
 
-  function updateExpBar(currentExp, maxExp) {
-      const expPercentage = (currentExp / maxExp) * 100;
-      expProgress.style.width = expPercentage + "%";
-  }
+    function updateExpBar(currentExp, maxExp) {
+        const expPercentage = (currentExp / maxExp) * 100;
+        expProgress.style.width = expPercentage + "%";
+    }
 
-  // Initialize user level and experience
-  let addedLevel = 0; // to be changed to user's level
-  let currentExp = 5; // to be replaced with number of items bought
-  const maxExp = 10;
 
-  function addExperience(exp) {
-      currentExp += exp;
-      while (currentExp >= maxExp) {
-          currentExp -= maxExp;
-          addedLevel += 1;
-      }
-      updateExpBar(currentExp, maxExp);
-      console.log(`total extra levels to add: ${addedLevel}`);
-  }
+    let addedLevel = 0; 
+    let currentExp = 5; 
+    const maxExp = 10;
 
-  // Example usage of addExperience
-  addExperience(10); // Add 10 experience points
+    // function addExperience(exp) {            //example for adding points part one ref for future code in this project.
+    //     currentExp += exp;
+    //    while (currentExp >= maxExp) {
+    //         currentExp -= maxExp;
+    //         addedLevel += 1;
+    //     }
+    //     updateExpBar(currentExp, maxExp);
+    //    console.log(`total extra levels to add: ${addedLevel}`);}
+
+    // UPDATE SECTION....
+    document.getElementById("update-contact-submit").addEventListener("click", function (e) {
+        e.preventDefault();
+        // Retrieve all my update form values
+        let contactName = document.getElementById("update-username").value;
+        let contactBio = document.getElementById("update-bio").value;
+        let contactId = localStorage.getItem("userId");
+
+        console.log(contactName);
+        console.log(contactBio);
+        console.log(contactId);
+
+        // Call our update form function which makes an AJAX call to our RESTDB to update the selected information
+        updateForm(contactId, contactName, contactBio);
+    });
+
+    function updateForm(_id, username, bio) {
+        var jsondata = { "username": username, "bio": bio }; // sets the data for user and bio
+        console.log(jsondata);
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://diasoproject-5af3.restdb.io/rest/contact/${_id}",
+            "method": "PATCH",
+            "headers": {
+              "content-type": "application/json",
+              "x-apikey": APIKEY,
+              "cache-control": "no-cache"
+            },
+            body: JSON.stringify(jsondata)
+          }
+
+        fetch(`https://diasoproject-5af3.restdb.io/rest/contact/${_id}`, settings)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                alert("Profile page updated successfully!");
+                location.reload();
+            })
+            .catch(error => {
+                console.error("Error updating contact:", error);
+            });
+        
+
+    }
 });

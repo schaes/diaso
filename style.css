@@ -291,9 +291,11 @@ body.home h3{
     border: #C2C0EC 3px solid;
     border-radius: 26px;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
     background-color: #FFFFFF;
     max-width: 100vw;
+    height: 250px;
+    font: 20px Jost;
     
 }
 .userStats{
@@ -328,6 +330,7 @@ body.home h3{
     transition: width 0.5s ease-in-out;
 }
 #usrnmProfile{
+    margin-left: 10px;
     font: bold 40px Inter;
     color: #10003F;
 }
@@ -386,6 +389,17 @@ h2{font: bold 30px Inter;}
     font: bold 16px Inter;
     border: none;
     margin-left:auto
+}
+
+#update-bio{
+
+    width: 93vw;
+    height: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #E3D2FF;
+    border: none;
+    
 }
 
 

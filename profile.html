@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body class="profilePageBody">
@@ -28,7 +27,7 @@
                 <span id="usrnmProfile">username</span>
                 <div id="expBar">
                     <div >
-                        <span id="level">lv.</span>
+                        <span id="level">lv.0</span>
                     </div>
                     <div class="bar">
                         <div class="exp" id="expProgress"></div>
@@ -39,26 +38,22 @@
         <div id="biography">
             <span id="bio">bio</span>
         </div>
-        <button class="EditBtn" type="submit" id="edit">Edit</button>
     </div>
     
     <div class="updateBox" id="update-container"> 
     <h2>Update Info</h2>
     <div id="update-contact">
 		<form id="update-contact-form">
-            <label for="update-contact-name">Name</label>
+            <label for="update-contact-name">Username</label>
             <div>
-                <input type="text" id="update-contact-name" class="form-control" required>
+                <input type="text" id="update-username" class="form-control" required>
             </div>
             <label for="update-bio">Bio</label>
             <div>
-                <input type="text" id="update-bio" class="form-control" required>
+                <textarea type="text" id="update-bio" class="form-control" required></textarea>
             </div>
 
             <button type="submit" class="profilebtn" id="update-contact-submit">Update Details</button> 
-
-
-          
         </form>
     </div>
 </div>
