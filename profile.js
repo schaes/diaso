@@ -33,35 +33,37 @@ document.addEventListener("DOMContentLoaded", function () {
         usrnmProfile.textContent = user.username;
         biography.textContent = user.bio|| "No bio available.";
 
-        const currentExp = user.currentExp;
-        const maxExp = user.maxExp;
+        const maxExp = 10;
         let currentLevel = user.level; // Set currentLevel to user's level
-        const expInProgressBar = currentExp % maxExp;
 
         if (currentLevel == null || currentLevel === undefined) {
-            currentLevel = 1;
+            currentLevel = 0;
         }
+        updateExpBar(currentLevel, maxExp);
+
+    } else {
+        alert("User not found.");
+    }
+    })
 
 
-        // updateExpBar(expInProgressBar, maxExp);          //example for adding points part two
-        // addExperience(10); // Add 10 experience points
-        // currentLevel += addedLevel;
-        levelElement.textContent = `lv.${currentLevel}`;
+    
 
-      } else {
-          alert("User not found.");
-      }
-  })
+    levelElement.textContent = `lv.${currentLevel}`;
 
     function updateExpBar(currentExp, maxExp) {
-        const expPercentage = (currentExp / maxExp) * 100;
+        let currentActualLevel = Math.floor(currentExp / maxExp);
+
+        let remainderExp = currentExp - currentActualLevel*maxExp;
+        const expPercentage = (remainderExp / maxExp) * 100;
         expProgress.style.width = expPercentage + "%";
+
+        level.textContent = `lv.${currentActualLevel}`;
     }
 
 
-    let addedLevel = 0; 
-    let currentExp = 5; 
-    const maxExp = 10;
+
+
 
     // function addExperience(exp) {            //example for adding points part one ref for future code in this project.
     //     currentExp += exp;
