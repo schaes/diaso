@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Cart</title>
+    <title>Product</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,22 +12,35 @@
 
 </head>
 
-<body class="cartBody">
+<body class="productBody">
     <nav class="topNav">
             <img src="images/logo2.png" alt="logo of the app" width="104" height="104">
             <a href="notif.html"><img src="images/icons/bellWhite.png" alt="notification bell" width="200" height="auto"></a>
     </nav>
 
-    <div class="cartCheckOut">
-        <h2 class="cartTitle">Cart</h2>
-        <h3 class="checkOutTitle">Check Out</h3>
-        <h4 class="checkOutAmtTitle">Total: $</h4>       
-    </div>
+   <div class="productContent">
+        <div class="ProductImages">
+            <img src="images/merchandise/hsrCatFigure.png" alt="Genshin Archon Plushies" width="600px" height="auto">
+        </div>
 
-    <div class="orderNav">
-        <h2 class="orderTitle">Orders</h2>
-        <div class="orderEnter"></div>
-    </div>
+        <div class="productInfo">
+            <h3 class="productName">Sunsyea Honkai Star Rail Official Merch miHoYo Original Authentic YCSY Ruan Mei Pet</h3>
+            <div class="pricesContainer">
+                <h5>Price: </h5>
+                <h2>$27.14</h2>
+            </div>
+            
+
+            <div class="quantityCounter">
+                <h5>Quantity: <span id="counter">0</span></h5>
+                <h5 id="decrement">-</h5>
+                <h5 id="increment">+</h5>
+            </div>
+            <h4 class="addToCart">Add To Cart</h4>      
+            <p><button onclick="clickCounter()" type="button">+</button></p>
+            <div id="result"></div>   
+        </div>
+   </div>
 
     <nav class="bottomNav">
         <div>
@@ -37,7 +50,7 @@
             <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100" height="auto"></a>
         </div>
     </nav>
-
+    <script src="quantity.js"></script>
 </body>
 
 </html>
