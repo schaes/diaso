@@ -1,46 +1,76 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const APIKEY = "67a2fd3b673edb11eed1d2e9";
+  const APIKEY = "67a2fd3b673edb11eed1d2e9";
+  const userId = localStorage.getItem("userId");
 
-    let userId = localStorage.getItem("username");
+  if (!userId) {
+      console.error("No user ID found in localStorage");
+      return;
+  }
 
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://diasoproject-5af3.restdb.io/rest/contact",
-        "method": "GET",
-        "headers": {
+  const usrnmProfileDisplay = document.getElementById("usrnmProfile");
+  const biographyDiv = document.getElementById("bio");
+  const levelElement = document.getElementById('level');
+  const levelDisplay = document.querySelector("#expBar span");
+  const expProgress = document.getElementById("expProgress");
+
+  var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": `https://diasoproject-5af3.restdb.io/rest/contact?q={"_id":"${userId}"}`,
+      "method": "GET",
+      "headers": {
           "content-type": "application/json",
           "x-apikey": APIKEY,
           "cache-control": "no-cache"
-        }
       }
-      
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-      });
-        
-    
-    
-    
-    let currentLevel = 1;
-    const currentExp = 13; // to be replaced with number of items bought
-    const maxExp = 10;
+  };
 
-    const expPercentage = (currentExp / maxExp) * 100;
-    const expProgress = document.getElementById("expProgress");
-    expProgress.style.width = expPercentage + "%";
+  // Fetch user data
+  $.ajax(settings).done(function (response) {
+      if (response.length > 0) {
+          const user = response[0]; // Access the first element of the array
+          console.log(user);
 
-    const levelDisplay = document.querySelector("#expBar span");
-    levelDisplay.textContent = `lvl ${currentLevel}`;
+          usrnmProfile.textContent = user.username;
+          biography.textContent = user.bio|| "No bio available.";
 
-    function addExperience(exp) {
-        currentExp += exp;
-        while (currentExp >= maxExp) {
-            currentExp -= maxExp;
-            maxExp+=5;
-            currentLevel+=1;
-        }
-        updateExpBar();
-        console.log(`Current level: ${currentLevel}`);
-    }
+          const currentExp = user.currentExp;
+          const maxExp = user.maxExp;
+          let currentLevel = user.level; // Set currentLevel to user's level
+          const expInProgressBar = currentExp % maxExp;
+
+          levelElement.textContent = `lv.${currentLevel}`;
+          updateExpBar(expInProgressBar, maxExp);
+
+          levelDisplay.textContent = `lv.${currentLevel}`;
+      } else {
+          alert("User not found.");
+      }
+  })
+
+  function updateExpBar(currentExp, maxExp) {
+      const expPercentage = (currentExp / maxExp) * 100;
+      expProgress.style.width = expPercentage + "%";
+  }
+
+  // Initialize user level and experience
+  let currentLevel = 0; // to be changed to user's level
+  let currentExp = 5; // to be replaced with number of items bought
+  const maxExp = 10;
+
+  levelDisplay.textContent = `lv.${currentLevel}`;
+
+  function addExperience(exp) {
+      currentExp += exp;
+      while (currentExp >= maxExp) {
+          currentExp -= maxExp;
+          currentLevel += 1;
+      }
+      updateExpBar(currentExp, maxExp);
+      console.log(`Current level: ${currentLevel}`);
+      levelDisplay.textContent = `lv.${currentLevel}`;
+  }
+
+  // Example usage of addExperience
+  addExperience(10); // Add 10 experience points
 });

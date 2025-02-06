@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const APIKEY = "67a2fd3b673edb11eed1d2e9";
+    
     document.getElementById("login-submit").addEventListener("click", function (e) {
         e.preventDefault();
     
@@ -27,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 for (let i = 0; i < data.length; i++) {
                     if (data[i].username === username && data[i].password === password) {
                         validUser = true;
+                        localStorage.setItem("userId", data[i]._id);
+                        console.log(data[i]._id);
                         break;
                     }
                 }
