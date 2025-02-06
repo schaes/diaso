@@ -8,25 +8,56 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="home">
+<body class="profilePageBody">
     <nav class="topNav">
             <img src="images/logo2.png" alt="logo of the app" width="104" height="104">
             <a href="notif.html"><img src="images/icons/bellWhite.png" alt="notification bell" width="200" height="auto"></a>
     </nav>
-    <!-- search bar -->
-    <div class="search-bar">
-        <h1>Category: </h1>
-        <div class="searchContainer">
-            <form action="">
-                <input type="text" placeholder="Search..." name="search">
-                <img src="images/icons/search.png" alt="search icon" width="40" height="auto">
-            </form>
+    <h1>Profile</h1>
+    <div class="profile">
+        <div class="topProfile">
+            <div class="pfpicon">
+                <img src="images/profile-icon-placeholder.png" alt="profile icon" width="130" height="130">
+            </div>
+            <div class="userStats">
+                
+                <span id="usrnmProfile">username</span>
+                <div id="expBar">
+                    <div >
+                        <span id="level">lv.0</span>
+                    </div>
+                    <div class="bar">
+                        <div class="exp" id="expProgress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="biography">
+            <span id="bio">bio</span>
         </div>
     </div>
+    
+    <div class="updateBox" id="update-container"> 
+    <h2>Update Info</h2>
+    <div id="update-contact">
+		<form id="update-contact-form">
+            <label for="update-contact-name">Username</label>
+            <div>
+                <input type="text" id="update-username" class="form-control" required>
+            </div>
+            <label for="update-bio">Bio</label>
+            <div>
+                <textarea type="text" id="update-bio" class="form-control" required></textarea>
+            </div>
+
+            <button type="submit" class="profilebtn" id="update-contact-submit">Update Details</button> 
+        </form>
+    </div>
+</div>
+
 
     <nav class="bottomNav">
         <div>
@@ -36,7 +67,9 @@
             <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100" height="auto"></a>
         </div>
     </nav>
-
+    <script src="profile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+    
 </body>
 
 </html>

@@ -28,14 +28,13 @@ p {
     margin: 40px;
     justify-items: center;
     align-items: center;
+    text-align: center;
     background-color: white;
     border-radius: 25px;
     padding: 25px;
     display: flex;
     flex-direction: column;
 }
-
-
 
 .loginBox form{
     display: flex;
@@ -46,7 +45,6 @@ p {
 .loginBox form div{
     margin-bottom: 20px;
 }
-
 input{
     padding: 10px;
     border-radius: 5px;
@@ -80,6 +78,8 @@ button{
     
 }
 
+
+
 @media (min-width: 1080px) {
     body.loginBody {
       flex-direction: row; /* Side by side for large screens */
@@ -87,6 +87,9 @@ button{
   }
 
 /* Index Page CSS */
+body{
+    padding-top: 100px; 
+}
 
 body.home{
     background-color: white;
@@ -267,5 +270,137 @@ body.home h3{
     flex-grow: inherit;
     margin: 10px;
 }
+
+/* profile CSS */
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-top: 100px;
+}
+.topProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Changed from 'left' to 'flex-start' */
+    margin-top: 10px;
+
+}
+
+#biography{
+    border: #C2C0EC 3px solid;
+    border-radius: 26px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    max-width: 100vw;
+    height: 250px;
+    font: 20px Jost;
+    
+}
+.userStats{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+#expBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    width: 300px;
+}
+
+#expBar .bar {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: #FFFFFF;
+    border: #716CD3 3px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+#expBar .exp {
+    height: 100%;
+    background-color: #A890FE;
+    width: 0%; /* Initial width */
+
+    transition: width 0.5s ease-in-out;
+}
+#usrnmProfile{
+    margin-left: 10px;
+    font: bold 40px Inter;
+    color: #10003F;
+}
+.pfpicon{
+    border: #FFFFFF 10px solid;
+    border-radius: 100px;
+    margin: 15px;
+    background-color: #FFFFFF;
+}
+
+.profilePageBody{
+    background: linear-gradient(to bottom, #655FCF, #FFFFFF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    ;
+    
+}
+
+#level{
+    font: bold 20px Inter;
+    margin-left: 10px;
+    color: #655FCF;
+
+}
+
+.profilePageBody h1{
+    font: bold 60px Inter;
+    margin-left: 10px;
+    color: #FFFFFF;
+}
+
+.updateBox{
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    font: Inter;
+}
+
+form{font: 20px Inter;}
+
+h2{font: bold 30px Inter;}
+
+
+.EditBtn { 
+    max-width: 100px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #4C0099;
+    color: white;
+    font: bold 16px Inter;
+    border: none;
+    margin-left:auto
+}
+
+#update-bio{
+
+    width: 93vw;
+    height: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #E3D2FF;
+    border: none;
+    
+}
+
 
 /* [] CSS */
