@@ -54,21 +54,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Initialize user level and experience
-  let currentLevel = 0; // to be changed to user's level
+  let addedLevel = 0; // to be changed to user's level
   let currentExp = 5; // to be replaced with number of items bought
   const maxExp = 10;
-
-  levelDisplay.textContent = `lv.${currentLevel}`;
 
   function addExperience(exp) {
       currentExp += exp;
       while (currentExp >= maxExp) {
           currentExp -= maxExp;
-          currentLevel += 1;
+          addedLevel += 1;
       }
       updateExpBar(currentExp, maxExp);
-      console.log(`Current level: ${currentLevel}`);
-      levelDisplay.textContent = `lv.${currentLevel}`;
+      console.log(`total extra levels to add: ${addedLevel}`);
   }
 
   // Example usage of addExperience
