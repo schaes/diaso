@@ -3,16 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("contact-submit").addEventListener("click", function (e) {
     e.preventDefault();
 
-    // Retrieve form data
+    // to get the info
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     let confirmPassword = document.getElementById("confirmPassword").value;
+    
 
-    // Validate form data
+    // validation...
     if (password !== confirmPassword) {
       alert("Password does not match, please try again :( ");
       return;
-    }
+    };
 
     let jsondata = {
       "username": username,
@@ -43,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         console.log(data);
         document.getElementById("contact-submit").disabled = false;
-        window.location.href = "content1.html";
+        alert("Registration successful! Please login to continue.");
+        window.location.href = "index.html";
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);

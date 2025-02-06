@@ -17,14 +17,25 @@
             <img src="images/logo2.png" alt="logo of the app" width="104" height="104">
             <a href="notif.html"><img src="images/icons/bellWhite.png" alt="notification bell" width="200" height="auto"></a>
     </nav>
-    <!-- search bar -->
-    <div class="search-bar">
-        <h1>Category: </h1>
-        <div class="searchContainer">
-            <form action="">
-                <input type="text" placeholder="Search..." name="search">
-                <img src="images/icons/search.png" alt="search icon" width="40" height="auto">
-            </form>
+    <h1>Profile</h1>
+    <div class="profile">
+        <div class="topProfile">
+            <div class="pfpicon">
+                <img src="images/profile-icon-placeholder.png" alt="profile icon" width="130" height="130">
+            </div>
+            <div class="userStats">
+                <p id="usrnmProfile">username</p>
+                <div id="expBar">
+                    <div>lv.0</div>
+                    <div class="bar">
+                        <div class="exp" id="expProgress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="biography">
+            <p>bio</p>
         </div>
     </div>
 
@@ -36,7 +47,7 @@
             <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100" height="auto"></a>
         </div>
     </nav>
-
+    <script src="profile.js"></script>
 </body>
 
 </html>
