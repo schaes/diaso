@@ -170,14 +170,17 @@ body.home h3{
     transform: translate(-50%, -50%);
 }
 
-.topNav{
+.topNav {
+    position: fixed;
+    top: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    width: 100%;
+    padding: 10px;
     background-color: #4C0099;
     color: white;
+    height: 100px; /* Adjust this value as needed */
+    z-index: 1000; /* Ensure the nav bar is on top */
+    justify-content: space-between;
 }
 
 .bottomNav {
@@ -214,6 +217,12 @@ body.home h3{
 .ftContainer .description{
 
     max-width: 680px;
+    background-color: #f5eeff;
+    padding: 10px;
+}
+
+.content2desc{
+    max-width: 400px;
     background-color: #f5eeff;
     padding: 10px;
 }
