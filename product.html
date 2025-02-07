@@ -24,19 +24,21 @@
         </div>
 
         <div class="productInfo">
-            <h3 class="productName">Sunsyea Honkai Star Rail Official Merch miHoYo Original Authentic YCSY Ruan Mei Pet</h3>
+            <h3 id="productName">Sunsyea Honkai Star Rail Official Merch miHoYo Original Authentic YCSY Ruan Mei Pet</h3>
             <div class="pricesContainer">
                 <h5>Price: </h5>
                 <h2>$27.14</h2>
+                <p id="check"></p>
             </div>
             
 
             <div class="quantityCounter">
-                <h5>Quantity: <span id="counter">0</span></h5>
-                <h5 id="decrement">-</h5>
-                <h5 id="increment">+</h5>
+                <h5>Quantity:</h5>
+                <h5><button id="decrement">-</button>  </h5>
+                <h5 id="counter">1</h5>
+                <h5><button id="increment">+</button></h5>
             </div>
-            <h4 class="addToCart">Add To Cart</h4>      
+            <h4><button id="addToCart">Add To Cart</button></h4>      
             <p><button onclick="clickCounter()" type="button">+</button></p>
             <div id="result"></div>   
         </div>
@@ -50,7 +52,7 @@
             <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100" height="auto"></a>
         </div>
     </nav>
-    <script src="quantity.js"></script>
+    <script src="addToCart.js"></script>
 </body>
 
 </html>
