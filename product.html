@@ -28,19 +28,20 @@
             <div class="pricesContainer">
                 <h5>Price: </h5>
                 <h2>$27.14</h2>
-                <p id="check"></p>
             </div>
             
 
             <div class="quantityCounter">
                 <h5>Quantity:</h5>
-                <h5><button id="decrement">-</button>  </h5>
-                <h5 id="counter">1</h5>
-                <h5><button id="increment">+</button></h5>
+                <div class="buttonContainer">
+                    <h5><button id="decrement">-</button></h5>
+                    <h5 id="counter">1</h5>
+                    <h5><button id="increment">+</button></h5>
+                </div>
+                
             </div>
-            <h4><button id="addToCart">Add To Cart</button></h4>      
-            <p><button onclick="clickCounter()" type="button">+</button></p>
-            <div id="result"></div>   
+            <button id="addToCart">Add To Cart</button>   
+            <p id="check"></p>
         </div>
    </div>
 
@@ -52,6 +53,39 @@
             <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100" height="auto"></a>
         </div>
     </nav>
+
+    <p class="lineSeperator">-</p>
+
+    <div class="reviewsContainer">
+        <h1 class="reviewsTitle">Reviews</h1>
+        <div class="starContainer">
+            <img src="images/icons/starGrey.png" alt="grey star" width="100" height="auto">
+            <h2 class="totalRating">4.5 Stars</h2>
+        </div>
+        
+       
+        <h3>Leave a Review!</h3>
+        <div class="userRating">
+            <div class="starRatingUser">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+            </div>
+            <form id="reviewForm">
+            <textarea id="reviewMsg" required></textarea>
+            <input type="submit" value="Send" class="btn btn-primary" id="contact-submit">
+            </form>
+            
+        
+        <p>axsxasxsx<br><br></p>
+
+
+
+        </div>
+    </div>
+    
     <script src="addToCart.js"></script>
 </body>
 
