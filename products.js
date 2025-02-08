@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const APIKEY = "67a2fd3b673edb11eed1d2e9";
     
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      const results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    const category = getUrlParameter('category');
+    console.log('Category:', category); 
+    document.getElementById("category").textContent = category || "Search";
+
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -22,27 +33,31 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => {
         let content = "";
 
-        for (var i = 0; i < response.length; i++) {
+        // to filter products by category
+        const filteredProducts = response.filter(product => product.productCategory === category);     
+
+        for (var i = 0; i < filteredProducts.length; i++) {
           content = `${content}<div class="dContIndiv">
-            <img src='${response[i].productLink}' alt='${response[i].productName}' width='420' height='auto'>
+            <img src='${filteredProducts[i].productLink}' alt='${filteredProducts[i].productName}' width='420' height='auto'>
             <div class="content2desc">
-              <a class='ftTitle' href='product.html'>${response[i].productName}</a>
-              <p class='Cost'>${formatCurrency(response[i].productPrice)}</p>
+              <a class='ftTitle' href='product.html'>${filteredProducts[i].productName}</a>
+              <p class='Cost'>${formatCurrency(filteredProducts[i].productPrice)}</p>
             </div>
           </div>`;
         }
 
-        // Update our HTML content
+        // to update HTML content
         const productList = document.getElementById("product-list");
         productList.innerHTML = content;
         productList.style.display = "flex";
         productList.style.flexWrap = "wrap";
         productList.style.justifyContent = "left";
+        productList.style.marginLeft = "50px";
 
-        document.getElementById("total-results").innerHTML = response.length;
+        document.getElementById("total-results").innerHTML = filteredProducts.length;
       });
 
       function formatCurrency(value) {
-        return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+        return new Intl.NumberFormat('en-SG', { style: 'currency', currency: 'SGD' }).format(value);
     }
 });
