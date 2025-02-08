@@ -19,7 +19,7 @@
     </nav>
     <!-- search bar -->
     <div class="search-bar">
-        <h1>Category: </h1>
+        <h1>Category: <span id="category"></span></h1>
         <div class="searchContainer">
             <form action="">
                 <input type="text" placeholder="Search..." name="search">
@@ -29,28 +29,14 @@
     </div>
 
     <div class="doubleContainer"> <!--container for everything actually...-->
-        <div class="dContIndiv">
-            <img src="images/merchandise/genshinArchonPlush.jpg" alt="Genshin Archon Plushies" width="400" height="auto">
-            <div class="content2desc">
-                <a class="ftTitle" href="purchase.html">Official Genshin Impact Carnival Gathering Series Archon Plush Keychain</a>
-                <p class="Cost">$32.37</p>
-            </div>
-        </div>
-        <div class="dContIndiv">
-            <img src="images/merchandise/genshinArchonPlush.jpg" alt="Genshin Archon Plushies" width="400" height="auto">
-            <div class="content2desc">
-                <a class="ftTitle" href="purchase.html">Official Genshin Impact Carnival Gathering Series Archon Plush Keychain</a>
-                <p class="Cost">$32.37</p>
-            </div>
-        </div>
-        <div class="dContIndiv">
-            <img src="images/merchandise/genshinArchonPlush.jpg" alt="Genshin Archon Plushies" width="400" height="auto">
-            <div class="content2desc">
-                <a class="ftTitle" href="purchase.html">Official Genshin Impact Carnival Gathering Series Archon Plush Keychain</a>
-                <p class="Cost">$32.37</p>
+        <div class="container mt-5">
+            <h2>Results(<span id="total-results"></span>)</h2>
+            <div class="products" id="product-list">
+              <div></div>
             </div>
         </div>
     </div>
+
 
     <nav class="bottomNav">
         <div>
@@ -60,7 +46,8 @@
             <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100" height="auto"></a>
         </div>
     </nav>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+    <script src="products.js"></script>
 </body>
 
 </html>
