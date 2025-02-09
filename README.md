@@ -1,3 +1,6 @@
+# GitHub Page
+https://schaes.github.io/diaso/
+
 # Diaso E-commerce Website
 
 Diaso is an e-commerce website that sells anime merchandise and encourages the community to engage with each other more by letting them interact in the posts and reviews feature of the website.
