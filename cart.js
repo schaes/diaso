@@ -1,6 +1,9 @@
 const cart = JSON.parse(localStorage.getItem("inCart")) || [];
 
 const cartItems = document.getElementById("cartItems");
+const totalPrice = document.getElementById("totalPrice");
+
+let totalAmount = 0;
 
 for (let i = 0; i < cart.length; i++) {
     const newDiv = document.createElement("div"); //creates new div 
@@ -18,7 +21,8 @@ for (let i = 0; i < cart.length; i++) {
 
     const price = document.createElement("h5");
     const itemPrice = parseFloat(cart[i].price.replace(/[^0-9.-]+/g, "")); //removes sextra symbols, and make sure it's ready to calculate
-    price.textContent = "$" + (itemPrice * cart[i].quantity).toFixed(2); //calculates total price and rouds up to 2dp
+    const totalPrice = itemPrice * cart[i].quantity;
+    price.textContent = "$" + totalPrice.toFixed(2); //calculates total price and rouds up to 2dp
 
     newDiv.appendChild(image);
     newDiv.appendChild(title);
@@ -27,8 +31,12 @@ for (let i = 0; i < cart.length; i++) {
     // Append the new div to the container
     cartItems.appendChild(newDiv);
 
+    totalAmount += totalPrice;
+
     console.log(cart[i].price);
 }
+
+totalPrice.innerHTML = totalAmount.toFixed(2);
 
 console.log(cart);
 

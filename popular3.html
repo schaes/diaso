@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="productBody">
+    <nav class="topNav">
+            <img src="images/logo2.png" alt="logo of the app" width="104" height="104">
+            <a href="notif.html"><img src="images/icons/bellWhite.png" alt="notification bell" width="200" height="auto"></a>
+    </nav>
+
+   <div class="productContent">
+        <div class="ProductImages">
+            <img id="itemImage" src="images/merchandise/hsrAcrylicStand.png" alt="Honkai Star Rail Acrylic Stands" width="600px" height="auto">
+        </div>
+
+        <div class="productInfo">
+            <h3 id="productName">Sunsyea Honkai Star Rail Official Merch miHoYo Original Authentic LIVE Series Acrylic Stand Kafka Aventurine Robin</h3>
+            <div class="pricesContainer">
+                <h5>Price: </h5>
+                <h2 id="itemPrice">$17.33</h2>
+            </div>
+            
+
+            <div class="quantityCounter">
+                <h5>Quantity:</h5>
+                <div class="buttonContainer">
+                    <h5><button id="decrement">-</button></h5>
+                    <h5 id="counter">1</h5>
+                    <h5><button id="increment">+</button></h5>
+                </div>
+                
+            </div>
+            <button id="addToCart">Add To Cart</button>   
+            <p id="check"></p>
+        </div>
+   </div>
+
+    <p class="lineSeperator">-</p>
+
+    <div class="reviewsContainer">
+        <h1 class="reviewsTitle">Reviews</h1>
+        <div class="starContainer">
+            <img src="images/icons/starGrey.png" alt="grey star" width="100" height="auto">
+            <h2 class="totalRating">4.8 Stars</h2>
+        </div>
+        
+       
+        <h3>Leave a Review!</h3>
+        <div class="userRating">
+            <div class="starRatingUser">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+                <img src="images/icons/starGrey.png" alt="grey star" width="50" height="auto">
+            </div>
+            <div class="form" id="add-review">
+                <form id="add-review-form">
+                    <div class="form-group">
+                        <label for="review-nickname">Nickname</label>
+                        <input type="text" id="review-nickname" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-msg">Review</label>
+                        <textarea id="review-msg" required class="form-control"></textarea>
+                    </div>
+
+                    <input type="submit" value="Send" class="btn btn-primary" id="review-submit">
+                </form>
+            </div>
+        </div> 
+    </div>  
+
+    <div class="container mt-5"> 
+        <h2 class="allReviewTitle">Reviews</h2>
+        <div class="otherReviewContainer" id="other-reviews">
+            
+        </div>
+    </div>
+
+    <div class="container mt-5" id="update-review-container"> 
+        <div id="add-update-msg">
+			<div class="alert alert-success" role="alert">
+			    Review Submitted!
+			</div>
+        </div>
+        <h4>Update Review</h4>
+        <div class="form" id="update-review">
+			<form id="update-review-form">
+				<div class="form-group">
+					<label for="update-review-nickname">Nickame</label>
+                    <input type="text" id="update-review-nickname" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="update-review-msg">Message</label>
+                    <textarea id="update-review-msg" class="form-control" required>
+                    </textarea>
+                    <input type="hidden" id="update-review-id">
+                    </div>
+
+                    <input type="submit" value="Update Review Details" class="btn btn-warning" id="update-review-submit">
+                </form>
+        </div>
+    </div>
+
+    <p class="lineSeperator">-</p>
+
+    <nav class="bottomNav">
+        <div>
+            <a href="content1.html"><img src="images/icons/homeWhite.png" alt="icon that links to home page (index.html)" width="100"></a>
+            <a href="cart.html"><img src="images/icons/cartWhite.png" alt="icon that links to shopping cart page (shopping.html)" width="100"></a>
+            <a href="post.html"><img src="images/icons/postWhite.png" alt="icon that links to post page" width="100"></a>
+            <a href="contact.html"><img src="images/icons/contactWhite.png" alt="icon that links to contact us page (contact.html)" width="100"></a>
+            <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100"></a>
+        </div>
+    </nav>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="addToCart.js"></script>
+    <script src="review.js"></script>
+</body>
+
+</html>
