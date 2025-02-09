@@ -432,7 +432,6 @@ h2{font: bold 30px Inter;}
     align-items: center;
 }
 
-
 .orderNav{
     font: bold 35px Inter;
     position: fixed;
@@ -453,6 +452,75 @@ h2{font: bold 30px Inter;}
     border-top: 30px solid transparent;
     border-left: 55px solid #4D3CB2;
     border-bottom: 30px solid transparent;
+}
+
+.cartTitle{
+    font: bold 40px Inter;
+    color: white;
+    background-color: #A384FF;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+.checkOutContainer{
+    display: flex;
+    font: bold 30px Inter;
+    color: black;
+    background-color: #FFD18F;
+    width: 50%;
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.totalCheckOutPrice{
+    display: flex;
+    align-items: center;
+    background-color: #B9D7FF;
+    color: #212683;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px ;
+}
+
+#cartItems{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.productSingle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #E3D2FF;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.productSingle img{
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    border-color: #D6D6E2;
+    margin: 10px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.productSingle h3{
+    font: bold 30px Inter;
+    color: #4D4271;
+    align-items: center;
 }
 
 /* Product Page CSS */
@@ -690,7 +758,7 @@ h2{font: bold 30px Inter;}
 /* Orders Page CSS */
 
 .ordersBody{
-    padding-top: 56%;
+    padding-top: 850px;
     font: 20px Inter
 }
 
@@ -780,6 +848,20 @@ h2{font: bold 30px Inter;}
     color: #D4B3FF;
     padding: 10px;
     border-radius: 5px;
+}
+
+.singleOrderItem .orderDate{
+    background-color: #CBCBFF;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 5px;
+}
+
+.singleOrderItem .arrivalDate{
+    color: #0909A2;
 }
 
 .fixSpaceOrders{
