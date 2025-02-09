@@ -137,9 +137,6 @@ body.loginBody {
     color: #AC8CCE;
 
 }
-
-<<<<<<< HEAD
-  }
   
   .category{
       position: relative;
@@ -672,13 +669,9 @@ body.loginBody {
       padding-left: 38%;
       column-gap: 2%;
   }
-  
-  
-  
-  /* contact us CSS  web3forms used*/
 
-  .contactPageBody{
-=======
+
+
 .search-bar input{
     padding: 15px;
     margin-left: 50px;
@@ -900,12 +893,17 @@ body.loginBody {
 }
 
 .profilePageBody{
->>>>>>> 5816728c0485996a9be285b625a84536ea802bee
     background: linear-gradient(to bottom, #655FCF, #FFFFFF);
     background-repeat: no-repeat;
     background-size: cover;
-    ;
-<<<<<<< HEAD
+  }
+
+/* contact us CSS  web3forms used*/
+
+.contactPageBody{
+    background: linear-gradient(to bottom, #655FCF, #FFFFFF);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .contact-section {
@@ -988,10 +986,7 @@ body.loginBody {
     border-radius: 40px;
     font-size: 30px;
   }
-  
-=======
     
-}
 
 #level{
     font: bold 20px Inter;
@@ -1486,4 +1481,3 @@ h2{font: bold 30px Inter;}
 }
 
 /* [] CSS */
->>>>>>> 5816728c0485996a9be285b625a84536ea802bee
