@@ -9,27 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
 </head>
 
 <body class="home">
     <nav class="topNav">
-            <img src="images/logo2.png" alt="logo of the app" width="104" height="104">
-            <a href="notif.html"><img src="images/icons/bellWhite.png" alt="notification bell" width="200" height="auto"></a>
+        <img src="images/logo2.png" alt="logo of the app" width="104" height="104">
+        <a href="notif.html"><img src="images/icons/bellWhite.png" alt="notification bell" width="200" height="auto"></a>
     </nav>
     <!-- search bar -->
     <div class="search-bar">
         <h1>Home</h1>
         <div class="searchContainer">
-            <form action="">
-                <input type="text" placeholder="Search..." name="search">
-                <img src="images/icons/search.png" alt="search icon" width="40" height="auto">
+            <form id="search-form">
+                <a href="content2.html" class="FAKEsearchbar">Search...</a>
             </form>
         </div>
+        <img class="search-icon" src="images/icons/search.png" alt="search icon" width="30" height="auto">
+
     </div>
 
-
-    <h3>Categories</h2>
+    <h3>Categories</h3>
     <div class="scrollContainer">
         <div class="category">
             <a href="content2.html?category=vocaloid"><img src="images/merchandise/vocaloidCategory.jpg" alt="picture that links to vocaloid category" width="300" height="300">
@@ -53,7 +52,7 @@
         </div>
     </div>
 
-    <h3>Popular</h2>
+    <h3>Popular</h3>
     <div class="scrollContainer">
         <div class="category">
             <a href="product.html"><img src="images/merchandise/genshinHiliPlush.png" alt="genshinHili" width="300" height="300"></a>
@@ -73,30 +72,28 @@
         <div class="category">
             <a href="product.html"><img src="images/merchandise/hatsuneBag.png" alt="hatsuneBag" width="300" height="300"></a>
         </div>
-
     </div>
 
-    <h3>New Arrivals</h2>
+    <h3>New Arrivals</h3>
     <div class="scrollContainer">
         <div class="category">
-            <a href="purchase.html"><img src="images/merchandise/genshinNightLamp.png" alt="genshinNightLamp" width="300" height="300"></a>
+            <a href="product.html"><img src="images/merchandise/genshinNightLamp.png" alt="genshinNightLamp" width="300" height="300"></a>
         </div>
         <div class="category">
-            <a href="purchase.html"><img src="images/merchandise/holoAcrylicKeychains.png" alt="holoAcrylicKeychains" width="300" height="300"></a>
+            <a href="product.html"><img src="images/merchandise/holoAcrylicKeychains.png" alt="holoAcrylicKeychains" width="300" height="300"></a>
         </div>
         <div class="category">
-            <a href="purchase.html"><img src="images/merchandise/hsrCatFigure.png" alt="hsrCatFigure" width="300" height="300"></a>
+            <a href="product.html"><img src="images/merchandise/hsrCatFigure.png" alt="hsrCatFigure" width="300" height="300"></a>
         </div>
         <div class="category">
-            <a href="purchase.html"><img src="images/merchandise/holoKororinPlush.png" alt="holoKororinPlush" width="300" height="300"></a>
+            <a href="product.html"><img src="images/merchandise/holoKororinPlush.png" alt="holoKororinPlush" width="300" height="300"></a>
         </div>
         <div class="category">
-            <a href="purchase.html"><img src="images/merchandise/hatsunePouchBag.png" alt="hatsunePouchBag" width="300" height="300"></a>
+            <a href="product.html"><img src="images/merchandise/hatsunePouchBag.png" alt="hatsunePouchBag" width="300" height="300"></a>
         </div>
         <div class="category">
-            <a href="purchase.html"><img src="images/merchandise/genshinMetalKeychains.jpg" alt="genshinMetalKeychains" width="300" height="300"></a>
+            <a href="product.html"><img src="images/merchandise/genshinMetalKeychains.jpg" alt="genshinMetalKeychains" width="300" height="300"></a>
         </div>
-
     </div>
 
     <h2 id="featured">Featured</h2>
@@ -104,7 +101,7 @@
     <div class="ftContainer">
         <img src="images/merchandise/genshinArchonPlush.jpg" alt="Genshin Archon Plushies" width="700" height="auto">
         <div class="description">
-            <a class="ftTitle" href="purchase.html">Official Genshin Impact Carnival Gathering Series Archon Plush Keychain</a>
+            <a class="ftTitle" href="product.html">Official Genshin Impact Carnival Gathering Series Archon Plush Keychain</a>
             <p class="Cost">$32.37</p>
         </div>
     </div>
@@ -113,14 +110,14 @@
         <div class="dContIndiv">
             <img src="images/merchandise/holoTakodachiPlush.png" alt="holoTakodachiPlush" width="500" height="auto">
             <div class="description">
-                <a class="ftTitle" href="purchase.html">Hololive EN Takodachi Plush Toy Soft Stuffed Doll Ninomae Inanis Fan Xmas</a>
+                <a class="ftTitle" href="product.html">Hololive EN Takodachi Plush Toy Soft Stuffed Doll Ninomae Inanis Fan Xmas</a>
                 <p class="Cost">$32.37</p>
             </div>
         </div>
         <div class="dContIndiv">
             <img src="images/merchandise/lukaFigure.png" alt="lukaFigure" width="500" height="auto">
             <div class="description">
-                <a class="ftTitle" href="purchase.html">Hatsune Miku Series Fuwa Petit Deformed Figure - Megurine Luka</a>
+                <a class="ftTitle" href="product.html">Hatsune Miku Series Fuwa Petit Deformed Figure - Megurine Luka</a>
                 <p class="Cost">$32.37</p>
             </div>
         </div>
@@ -128,16 +125,14 @@
 
     <nav class="bottomNav">
         <div>
-            <a href="content1.html"><img src="images/icons/homeWhite.png" alt="icon that links to home page (index.html)" width="100" height="auto"></a>
-            <a href="cart.html"><img src="images/icons/cartWhite.png" alt="icon that links to shopping cart page (shopping.html)" width="100" height="auto"></a>
-            <a href="contact.html"><img src="images/icons/contactWhite.png" alt="icon that links to contact us page (contact.html)" width="100" height="auto"></a>
-            <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100" height="auto"></a>
+            <a href="content1.html"><img src="images/icons/homeWhite.png" alt="icon that links to home page (index.html)" width="100"></a>
+            <a href="cart.html"><img src="images/icons/cartWhite.png" alt="icon that links to shopping cart page (shopping.html)" width="100"></a>
+            <a href="post.html"><img src="images/icons/postWhite.png" alt="icon that links to post page" width="100"></a>
+            <a href="contact.html"><img src="images/icons/contactWhite.png" alt="icon that links to contact us page (contact.html)" width="100"></a>
+            <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100"></a>
         </div>
     </nav>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
-    <script src="products.js"></script>
-
-
 </body>
 
 </html>
