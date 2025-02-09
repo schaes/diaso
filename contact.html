@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="contactPageBody">
+    <nav class="topNav">
+            <img src="images/logo2.png" alt="logo of the app" width="104" height="104">
+            <a href="notif.html"><img src="images/icons/bellWhite.png" alt="notification bell" width="200" height="auto"></a>
+    </nav>
+
+<section class="contact-section">
+    <div class="contact-intro">
+      <h2 class="contact-title">Get in Touch</h2>
+      <p class="contact-description">
+        Fill out the form below and we'll get back to you as soon as possible.
+      </p>
+    </div>
+  
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  
+      <input type="hidden" name="access_key" value="d61b29e1-35de-4f6c-aa50-aa7c21106bf2" />
+      <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+      <input type="hidden" name="from_name" value="Diaso" />
+
+      <div class="form-group-container">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+        </div>
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone</label>
+          <input id="phone" name="phone" class="form-input" placeholder="#65 1234 5678" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+        </div>
+      </div>
+      <button class="form-submit" type="submit">Send Message</button>
+    </form>
+  
+  </section>
+  <nav class="bottomNav">
+    <div>
+        <a href="content1.html"><img src="images/icons/homeWhite.png" alt="icon that links to home page (index.html)" width="100"></a>
+        <a href="cart.html"><img src="images/icons/cartWhite.png" alt="icon that links to shopping cart page (shopping.html)" width="100"></a>
+        <a href="post.html"><img src="images/icons/postWhite.png" alt="icon that links to post page" width="100"></a>
+        <a href="contact.html"><img src="images/icons/contactWhite.png" alt="icon that links to contact us page (contact.html)" width="100"></a>
+        <a href="profile.html"><img src="images/icons/profileWhite.png" alt="icon that links to profile page (profile.html)" width="100"></a>
+    </div>
+</nav>
+</body>
+
+</html>
