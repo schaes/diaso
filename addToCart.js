@@ -1,6 +1,8 @@
 //Add items to cart (stored in local storage for later use)
 
 let item = document.getElementById("productName").innerHTML;
+let itemImage = document.getElementById("itemImage").src;
+let itemPrice = document.getElementById("itemPrice").innerHTML;
 let quantityNum = 1;
 
 //counter for quantity
@@ -23,11 +25,11 @@ plus.addEventListener("click", () => {
 let cart = JSON.parse(localStorage.getItem("inCart")) || []; // get previous items in cart, or makes a new array
 
 document.getElementById("addToCart").addEventListener("click", function() {
-  myFunction(item, quantityNum);
+  myFunction(item, quantityNum, itemPrice, itemImage);
   }); //Button press to run function
 
 
-function myFunction(a, b) {
+function myFunction(a, b, c, d) {
     if (typeof(Storage) !== "undefined") { //checks to see if the browser supports local storage
       let existingItem = cart.find(item => item.name === a); //checks if item is already in cart
         
@@ -35,7 +37,7 @@ function myFunction(a, b) {
           existingItem.quantity += b; //adds the quantity to original quantity if it aleady is in the cart
       } else {
 
-          cart.push({name: a, quantity: b});
+          cart.push({name: a, quantity: b, price: c, image: d}); //adds item to cart
       }
 
       // Save the updated cart back to localStorage
