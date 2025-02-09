@@ -587,19 +587,19 @@ body.loginBody {
       flex: 1 auto;
   }
   
-  .leaveReview{
+.leaveReview{
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
   }
   
-  .starRatingUser{
+.starRatingUser{
       display: flex;
   }
   
   
-  #reviewMsg{
+#reviewMsg{
       width: 50vw;
       height: 100px;
       padding: 10px;
@@ -611,11 +611,61 @@ body.loginBody {
   
   /* Post Page CSS */
   
-  .postsBody{
-      padding-top: 120px;
-      font: 20px Inter
+.postsBody{
+      font: 20px Inter;
+
   }
-  
+
+.postsBody h1{
+    font: bold 60px Inter;
+    color: #310A59;
+    margin-left: 10px;
+
+  }
+
+.postsBody{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.allPosts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.postContainer{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #EEE6FC;
+    border-radius: 20px;
+}
+
+
+.postTitle{
+    font: bold 30px Inter;
+    color: #4D4271;
+    padding-left: 10px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.postContent{
+    max-width: 500px;
+    text-align: left;
+    padding: 10px;
+    color: #4D4271;
+    font: 20px Inter;
+
+}
+
+.postInteractions {
+    display: flex;
+    justify-content: right;
+}
   /* Orders Page CSS */
   
   .ordersBody{
@@ -1270,44 +1320,7 @@ h2{font: bold 30px Inter;}
     padding: 10px;
 }
 
-/* Post Page CSS */
 
-.postsBody{
-    padding-top: 120px;
-    font: 20px Inter
-}
-
-.allPosts{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 20px;
-}
-
-.postContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #EEE6FC;
-    width: 60vw;
-}
-
-.singlePost{
-    align-items: center;
-    justify-content: center;
-}
-
-.postInteraction{
-    padding-left: 90%;
-}
-
-.fixSpace{
-    padding: 30px;
-    color: white;
-}
 
 /* Orders Page CSS */
 
